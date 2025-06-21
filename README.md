@@ -97,6 +97,24 @@ python notebooks/housing_pipeline.py
 
 ---
 
+### 🔧 Building the Database Locally
+
+To build the `zhmi_data.db` file:
+
+1. Clone this repository
+2. Ensure the `zhmi_raw_files/` folders contain the provided `.csv` files
+3. Run:  
+   ```bash
+   python notebooks/main.py
+
+4. The database will be generated in `data/zhmi_data.db`
+
+
+
+
+
+
+
 ## 📄 License
 
 MIT License. See `LICENSE.md` for details.
