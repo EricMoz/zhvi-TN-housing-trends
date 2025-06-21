@@ -1,3 +1,15 @@
+# zhmi-TN-housing-trends · v1.0.0
+
+This project builds a lightweight, SQLite-based dataset of housing trends in Tennessee using publicly available CSVs. It includes a reproducible Python pipeline that transforms, cleans, and loads raw data into a query-ready format—ready for analysis or dashboard integration.
+
+---
+
+### 👤 About the Author
+
+Hi, I’m Eric—storyteller, systems builder, and digital organizer. Whether I’m weaving cosmic character lore or building scalable ETL pipelines, I thrive on blending structure with imagination. This project reflects my love for clean data, clean design, and code that’s built to breathe.
+
+---
+
 # 🏠 ZHVI Housing Trends Pipeline
 
 This project analyzes Zillow Home Value Index (ZHVI) monthly data across U.S. by zip codes, dating back to year 2000 through May 2025. It automates the ingestion, transformation, and storage of large housing datasets into an SQLite database, enabling clean analysis and dashboard creation.
