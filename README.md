@@ -68,10 +68,10 @@ ORDER BY "Zip Code", BedroomCount, Month;
 ## 🚀 How to Run
 
 ```bash
-git clone https://github.com/yourusername/zhmi-housing-trends.git
-cd zhmi-housing-trends
+git clone https://github.com/yourusername/zhmi-TN-housing-trends.git
+cd zhmi-TN-housing-trends
 pip install -r requirements.txt
-python notebooks/housing_pipeline.py
+python notebooks/transform_load_db_pipeline.py
 ```
 > ⚠️ Note: Place all raw Zillow .csv files into the zhmi_raw_files/ folder before running the pipeline.
 
@@ -105,7 +105,7 @@ To build the `zhmi_data.db` file:
 2. Ensure the `zhmi_raw_files/` folders contain the provided `.csv` files
 3. Run:  
    ```bash
-   python notebooks/main.py
+   python notebooks/transform_load_db_pipeline.py
 
 4. The database will be generated in `data/zhmi_data.db`
 
