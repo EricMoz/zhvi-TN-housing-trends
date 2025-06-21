@@ -1,14 +1,15 @@
 # zhmi-TN-housing-trends · v1.0.0
 
-This project builds a lightweight, SQLite-based dataset of housing trends in Tennessee using publicly available CSVs. It includes a reproducible Python pipeline that transforms, cleans, and loads raw data into a query-ready format—ready for analysis or dashboard integration.
+This project builds a lightweight, SQLite-based dataset of housing trends in Tennessee using publicly available CSVs. It includes a reproducible Python pipeline that transforms, cleans, and loads raw data into a structured database—ideal for analysis, visualization, or integration into dashboards.
 
 ---
 
 ### 👤 About the Author
 
-Hi, I’m Eric—storyteller, systems builder, and digital organizer. Whether I’m weaving cosmic character lore or building scalable ETL pipelines, I thrive on blending structure with imagination. This project reflects my love for clean data, clean design, and code that’s built to breathe.
+Eric is a data-driven problem solver with a strong focus on reproducibility, precision, and thoughtful design. He combines technical expertise in Python, SQL, and ETL workflows with a meticulous approach to organization and documentation. This project reflects a commitment to building transparent, scalable tools for data exploration.
 
 ---
+
 
 # 🏠 ZHVI Housing Trends Pipeline
 
