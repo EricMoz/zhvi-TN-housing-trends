@@ -1,4 +1,4 @@
-# zhmi-TN-housing-trends · v1.0.0
+# zhvi-TN-housing-trends · v1.0.0
 
 This project builds a lightweight, SQLite-based dataset of housing trends in Tennessee using publicly available CSVs. It includes a reproducible Python pipeline that transforms, cleans, and loads raw data into a structured database—ideal for analysis, visualization, or integration into dashboards.
 
@@ -17,7 +17,7 @@ This project analyzes Zillow Home Value Index (ZHVI) monthly data across U.S. by
 
 - Data Source: https://www.zillow.com/research/data/
     - Section: Home Values
-    - Reports: ZHMI [1 - 5+] Bedroom Time Series ($)
+    - Reports: ZHVI [1 - 5+] Bedroom Time Series ($)
     - Geography Used: Zip Code
     - Export Date: 6/19/2025
 
@@ -25,12 +25,12 @@ This project analyzes Zillow Home Value Index (ZHVI) monthly data across U.S. by
 <pre><code>## 📁 Project Structure
 zhmi-housing-trends/
 ├── data/
-│   └── zhmi_data.db             ← Final SQLite database
+│   └── zhvi_data.db             ← Final SQLite database
 ├── dashboard/
-│   └── housing_dashboard.pbix   ← Interactive Power BI dashboard (optional)
+│   └── housing_dashboard.pbix   ← Interactive Power BI dashboard (TBD - optional)
 ├── notebooks/
-│   └── housing_pipeline.ipynb   ← Data pipeline (ETL)
-├── zhmi_raw_files/
+│   └── transform_load_db_pipeline.ipynb   ← Data pipeline (ETL)
+├── zhvi_raw_files/
 │   └── *.csv                    ← Raw Zillow CSV files (not tracked)
 ├── sql/
 │   └── sample_queries.sql       ← Example SQL queries
@@ -44,7 +44,7 @@ zhmi-housing-trends/
 ## ⚙️ How It Works
 
 ### 1. **Extract**
-Raw `.csv` files representing home values by bedroom count are read from the `zhmi_raw_files/` folder.
+Raw `.csv` files representing home values by bedroom count are read from the `zhvi_raw_files/` folder.
 
 ### 2. **Transform**
 - Filters for `RegionType = "zip"`
@@ -53,7 +53,7 @@ Raw `.csv` files representing home values by bedroom count are read from the `zh
 - Cleans and converts data types for consistency
 
 ### 3. **Load**
-The cleaned dataset is saved to `data/zhmi_data.db`, ready for fast SQL querying or dashboard consumption.
+The cleaned dataset is saved to `data/zhvi_data.db`, ready for fast SQL querying or dashboard consumption.
 
 
 
@@ -68,7 +68,7 @@ SELECT
     BedroomCount,
     RegionName AS "Zip Code",
     ROUND(AVG(HomeValue), 2) AS AvgHomeValue
-FROM zhmi_data
+FROM zhvi_data
 WHERE State = 'TN' 
   AND City = 'Nashville' 
   AND strftime('%Y', Date) >= '2020'
@@ -81,12 +81,12 @@ ORDER BY "Zip Code", BedroomCount, Month;
 ## 🚀 How to Run
 
 ```bash
-git clone https://github.com/yourusername/zhmi-TN-housing-trends.git
-cd zhmi-TN-housing-trends
+git clone https://github.com/yourusername/zhvi-TN-housing-trends.git
+cd zhvi-TN-housing-trends
 pip install -r requirements.txt
 python notebooks/transform_load_db_pipeline.py
 ```
-> ⚠️ Note: Place all raw Zillow .csv files into the zhmi_raw_files/ folder before running the pipeline.
+> ⚠️ Note: Place all raw Zillow .csv files into the zhvi_raw_files/ folder before running the pipeline.
 
 
 
@@ -112,15 +112,15 @@ python notebooks/transform_load_db_pipeline.py
 
 ### 🔧 Building the Database Locally
 
-To build the `zhmi_data.db` file:
+To build the `zhvi_data.db` file:
 
 1. Clone this repository
-2. Ensure the `zhmi_raw_files/` folders contain the provided `.csv` files
+2. Ensure the `zhvi_raw_files/` folders contain the provided `.csv` files
 3. Run:  
    ```bash
    python notebooks/transform_load_db_pipeline.py
 
-4. The database will be generated in `data/zhmi_data.db`
+4. The database will be generated in `data/zhvi_data.db`
 
 
 
