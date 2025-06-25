@@ -1,6 +1,9 @@
 # zhvi-TN-housing-trends · v1.0.0
 
-This project builds a lightweight, SQLite-based dataset of housing trends in Tennessee using publicly available CSVs. It includes a reproducible Python pipeline that transforms, cleans, and loads raw data into a structured database—ideal for analysis, visualization, or integration into dashboards.
+![Python](https://img.shields.io/badge/Built%20with-Python%203.11-blue?style=flat-square&logo=python)
+![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey?style=flat-square&logo=sqlite)
+
+This project delivers a lightweight, SQLite-backed dataset of Tennessee housing trends, built from data sourced from Zillow. It features a reproducible Python pipeline that transforms raw ZHVI data into a structured, query-ready database—ideal for visualizations, dashboards, or deeper analysis.
 
 ---
 
@@ -9,7 +12,6 @@ This project builds a lightweight, SQLite-based dataset of housing trends in Ten
 Eric is a data-driven problem solver with a strong focus on reproducibility, precision, and thoughtful design. He combines technical expertise in Python, SQL, and ETL workflows with a meticulous approach to organization and documentation. This project reflects a commitment to building transparent, scalable tools for data exploration.
 
 ---
-
 
 # 🏠 ZHVI Housing Trends Pipeline
 
@@ -23,7 +25,7 @@ This project analyzes Zillow Home Value Index (ZHVI) monthly data across U.S. by
 
 
 <pre><code>## 📁 Project Structure
-zhmi-housing-trends/
+zhvi-housing-trends/
 ├── data/
 │   └── zhvi_data.db             ← Final SQLite database
 ├── dashboard/
@@ -37,6 +39,23 @@ zhmi-housing-trends/
 ├── .gitignore
 └── README.md
 </code></pre>
+
+
+---
+
+## 📊 Interactive Dashboard
+
+Explore Tennessee housing trends with interactive filters by ZIP code, county, and bedroom count. View historical ZHVI data from 2000–2025 and compare regions using intuitive charts and a color-coded map.
+
+[👉 View the dashboard on Tableau Public](https://public.tableau.com/views/Tennessee-ZillowHomeValueIndexExplorer/TennesseeZHVIExplorer)
+
+
+![Dashboard Preview](images/tn_zhvi_explorer.png)
+
+🎯 **Key Features:**
+- Filter by ZIP code, county, or bedroom count
+- View monthly ZHVI trends from 2000–2025
+- Identify affordable ZIP codes based on selected criteria
 
 
 ---
@@ -59,9 +78,8 @@ The cleaned dataset is saved to `data/zhvi_data.db`, ready for fast SQL querying
 
 ---
 
-## 📊 Preview Query: Average ZHVI by Zip (Nashville, 2020+)
+## 🔎 SQL Preview: Average ZHVI in Nashville (2020–present)
 
-## sql
 ```
 SELECT 
     strftime('%Y-%m', Date) AS Month,
@@ -92,25 +110,15 @@ python notebooks/transform_load_db_pipeline.py
 
 ---
 
-## 🛠 Tools Used
+### 🔧 Building the Database Locally
+
+#### 🛠 Tools Used
 
 - Python (`pandas`, `sqlite3`)
 - SQLite (via DB Browser or `pd.read_sql_query`)
 - Jupyter & VS Code for development and testing
 
-
 ---
-
-## 📌 Next Steps
-
-- Publish dashboard insights for public viewing
-- Add automated tests for pipeline integrity
-- Explore regional trend forecasting (ARIMA or Prophet)
-- Open cleaned dataset for public or team analysis
-
----
-
-### 🔧 Building the Database Locally
 
 To build the `zhvi_data.db` file:
 
@@ -123,7 +131,7 @@ To build the `zhvi_data.db` file:
 4. The database will be generated in `data/zhvi_data.db`
 
 
-
+---
 
 
 
