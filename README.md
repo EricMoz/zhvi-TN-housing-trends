@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Built%20with-Python%203.11-blue?style=flat-square&logo=python)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey?style=flat-square&logo=sqlite)
 
-This project delivers a lightweight, SQLite-backed dataset of Tennessee housing trends, built from data sourced from Zillow. It features a reproducible Python pipeline that transforms raw ZHVI data into a structured, query-ready database—ideal for visualizations, dashboards, or deeper analysis.
+This project delivers a lightweight, SQLite-backed dataset of Tennessee housing trends, built from data sourced from Zillow. It features a reproducible Python pipeline that transforms raw ZHVI data into a structured, query-ready database that's ideal for visualizations, dashboards, or deeper analysis.
 
 ---
 
