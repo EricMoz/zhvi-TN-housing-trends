@@ -67,7 +67,7 @@ Explore Tennessee housing trends through an interactive Power BI report built on
   2. **Avg Home Value by Year and Bedroom Count**: Line graph showing historical trends.
   3. **Home Value 5-Year Forecast (95% CI)**: Line chart with 10-year historical data and forecast, adjustable via slicers.
   4. **Residential Value Evolution by Bedroom Count (Animated)**: Scatter chart visualizing YOY% change vs. Avg Home Value.
-  5. **YOY Price Change Rank by Bedroom Size**: Funnel chart displaying a 20-year trend.
+  5. **YOY Price Change Rank by Bedroom Size**: Ribbon chart displaying a 20-year trend.
 - **DAX Measures**: Calculated Avg Home Value and YOY% for dynamic analysis.
 - **ETL Integration**: Uses the Python ETL pipeline to extract Zillow CSVs, transform into a star schema, and load into Power BI.
 
@@ -170,5 +170,6 @@ To build the `zhvi_data.db` file:
 ## 📄 License
 
 MIT License. See `LICENSE.md` for details.
+
 
 
