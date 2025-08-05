@@ -63,7 +63,7 @@ Explore Tennessee housing trends through an interactive Power BI report built on
 - **Data Enrichment**: Filled null city values in DimCityMetro using an imported table from [zip-codes.com](https://www.zip-codes.com/state/tn.asp) via Power Query.
 - **Interactive Slicers**: Filter by Bedroom Count (1–5+), County, City, and ZIP Code, applying across all pages.
 - **Report Pages**:
-  1. **Tennessee Avg Home Value by ZIP (May 2025)**: 3D column chart with color-coded categories (<$250k, $250k–<$350k, $350k–<$450k, $450k–<$650k, $650k+).
+  1. **Tennessee Avg Home Value by ZIP (May 2025)**: Azure Map using 3D column layer with color-coded categories (<$250k, $250k–<$350k, $350k–<$450k, $450k–<$650k, $650k+).
   2. **Avg Home Value by Year and Bedroom Count**: Line graph showing historical trends.
   3. **Home Value 5-Year Forecast (95% CI)**: Line chart with 10-year historical data and forecast, adjustable via slicers.
   4. **Residential Value Evolution by Bedroom Count (Animated)**: Scatter chart visualizing YOY% change vs. Avg Home Value.
@@ -170,4 +170,5 @@ To build the `zhvi_data.db` file:
 ## 📄 License
 
 MIT License. See `LICENSE.md` for details.
+
 
